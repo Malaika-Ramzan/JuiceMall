@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JuiceMall - Fresh Juiceables</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Juice<span>Mall</span></div>
+  <nav id="navMenu">
+    <a href="#" data-page="home" class="nav-link active">Home</a>
+    <a href="#" data-page="about" class="nav-link">About</a>
+    <a href="#" data-page="services" class="nav-link">Services</a>
+    <a href="#" data-page="products" class="nav-link">Products</a>
+    <a href="#" data-page="contact" class="nav-link">Contact</a>
+  </nav>
+  <div class="header-right">
+    <button class="login-btn" onclick="showPage('contact')">Login</button>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
+
+<section id="home" class="page active-page">
+  <main class="hero">
+    <div class="bg-glow"></div>
+    <div class="left" id="leftBox">
+      <p class="eyebrow">100% NATURAL</p>
+      <h1>Get Fresh<br><span id="accent">Juiceables</span><br>Everyday</h1>
+      <p class="desc" id="desc">Pure taste. Better health.<br>Fresh start every morning.</p>
+      <div class="btns">
+        <button class="shop" onclick="showPage('products')">Shop Now</button>
+        <button class="explore" onclick="showPage('about')">Explore →</button>
+      </div>
+      <div class="dots">
+        <span class="dot green active" data-index="0"></span>
+        <span class="dot pink" data-index="1"></span>
+        <span class="dot orange" data-index="2"></span>
+      </div>
+    </div>
+    <div class="right">
+      <div class="circle" id="circle"></div>
+      <div class="bottle" id="bottle">
+        <div class="cap"></div>
+        <div class="label"><b>J F</b><p>JUICEABLES</p><small id="flavourText">KIWI</small></div>
+      </div>
+    </div>
+  </main>
+</section>
+
+<section id="about" class="page">
+  <div class="page-box">
+    <h2>About <span>JuiceMall</span></h2>
+    <p>JuiceMall is a fresh juice brand made with 100% natural fruits. No sugar, no preservatives, only pure taste and good health.</p>
+    <div class="cards">
+      <div class="card"><h3>🍃 100% Natural</h3><p>Fresh fruits every morning, directly from farms.</p></div>
+      <div class="card"><h3>💪 Healthy</h3><p>Full of vitamins, energy and freshness.</p></div>
+      <div class="card"><h3>🚀 Fast Delivery</h3><p>Your juice reaches you cold and fresh in 30 minutes.</p></div>
+    </div>
+    <button class="shop" onclick="showPage('products')">See Our Juices</button>
+  </div>
+</section>
+
+<section id="services" class="page">
+  <div class="page-box">
+    <h2>Our <span>Services</span></h2>
+    <p>We provide best services for our juice lovers.</p>
+    <div class="cards">
+      <div class="card"><h3>🥤 Fresh Juice Bar</h3><p>Fresh juice made in front of you.</p></div>
+      <div class="card"><h3>📦 Home Delivery</h3><p>Order online and get delivery at home.</p></div>
+      <div class="card"><h3>🎉 Party Orders</h3><p>Bulk orders for parties and events.</p></div>
+      <div class="card"><h3>📅 Monthly Plan</h3><p>Fresh juice every day at low price.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="page">
+  <div class="page-box">
+    <h2>Our <span>Products</span></h2>
+    <p>Choose your favourite flavour.</p>
+    <div class="cards">
+      <div class="card product-card" onclick="goToJuice(0)"><div class="mini-bottle green-bg">J F</div><h3>Kiwi Juice</h3><p>Fresh & Healthy</p><b>Rs. 250</b><br><button>Buy Now</button></div>
+      <div class="card product-card" onclick="goToJuice(1)"><div class="mini-bottle pink-bg">J F</div><h3>Strawberry Juice</h3><p>Sweet & Delicious</p><b>Rs. 300</b><br><button>Buy Now</button></div>
+      <div class="card product-card" onclick="goToJuice(2)"><div class="mini-bottle orange-bg">J F</div><h3>Orange Juice</h3><p>Full of Vitamin C</p><b>Rs. 200</b><br><button>Buy Now</button></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="page">
+  <div class="page-box">
+    <h2>Contact <span>Us</span></h2>
+    <p>Have any question? Send us a message.</p>
+    <form class="contact-form" onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="msg" placeholder="Your Message" required></textarea>
+      <button type="submit" class="shop">Send Message</button>
+      <p id="successMsg" class="success"></p>
+    </form>
+    <div class="contact-info">
+      <p>📍 Bahawalpur, Punjab, Pakistan</p>
+      <p>📞 0300-1234567</p>
+      <p>✉️ hello@juicemall.com</p>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
